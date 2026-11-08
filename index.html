@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bokföring – ladda ner appen</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="ikon.png">
+<style>
+:root { --green: #0B6B4E; --tint: #E4F2EC; --ink: #10201B; --muted: #62706A; --bg: #F5F7F4; --line: #E8ECE6; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.5; }
+header { background: var(--green); color: #fff; padding: 36px 20px 30px; text-align: center; }
+header img { width: 84px; height: 84px; border-radius: 20px; background: #fff; padding: 6px; }
+h1 { margin: 14px 0 4px; font-size: 30px; font-weight: 600; }
+header p { margin: 0; opacity: .9; }
+main { max-width: 520px; margin: -18px auto 40px; padding: 0 16px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 20px; margin-bottom: 14px; }
+.btn { display: block; text-align: center; background: var(--green); color: #fff; text-decoration: none; font-weight: 600; font-size: 18px; padding: 16px; border-radius: 14px; }
+.small { font-size: 14px; color: var(--muted); text-align: center; margin: 10px 0 0; }
+ol { padding-left: 0; list-style: none; counter-reset: s; margin: 0; }
+li { counter-increment: s; position: relative; padding-left: 40px; margin-bottom: 14px; }
+li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: #fff; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+h2 { font-size: 18px; margin: 0 0 12px; }
+.note { background: var(--tint); border-radius: 12px; padding: 12px 14px; font-size: 15px; }
+footer { text-align: center; font-size: 13px; color: var(--muted); padding-bottom: 30px; }
+</style>
+</head>
+<body>
+<header>
+  <img src="ikon.png" alt="">
+  <h1>Bokföring</h1>
+  <p>Fakturor, kvitton och Z-rapporter – för Android-mobil och surfplatta</p>
+</header>
+<main>
+  <div class="card">
+    <a class="btn" href="https://github.com/ak2296/bokforing-app/releases/latest/download/Bokforing.apk">Ladda ner appen</a>
+    <p class="small">Senaste versionen · Android 7.0 eller senare</p>
+  </div>
+  <div class="card">
+    <h2>Så installerar du</h2>
+    <ol>
+      <li>Tryck på <b>Ladda ner appen</b> och vänta tills filen är nedladdad.</li>
+      <li>Öppna filen <b>Bokforing.apk</b>.</li>
+      <li>Frågar telefonen om installation från okänd källa: välj <b>Inställningar</b>, slå på <b>Tillåt från den här källan</b> och gå tillbaka.</li>
+      <li>Tryck på <b>Installera</b>.</li>
+      <li>Öppna appen och gå till <b>Inställningar → Aktivering</b>. Klistra in aktiveringskoden du har fått via e-post eller SMS.</li>
+    </ol>
+  </div>
+  <div class="card note">
+    <b>Uppdatera:</b> en ny version installeras på samma sätt och läggs över den gamla. Dina uppgifter finns kvar. Ta inte bort appen före en uppdatering.
+  </div>
+</main>
+<footer>Appen kräver en aktiveringskod för att skanna och spara.</footer>
+</body>
+</html>

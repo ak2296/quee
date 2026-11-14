@@ -34,13 +34,14 @@ footer { text-align: center; font-size: 13px; color: var(--muted); padding-botto
 </header>
 <main>
   <div class="card">
-    <a class="btn" href="https://github.com/ak2296/quee/releases/latest/download/Quee.apk">Ladda ner appen</a>
+    <p class="small" style="margin:0 0 12px">Startade inte nedladdningen av sig själv? Tryck på knappen nedan.</p>
+    <a class="btn" id="dl" href="https://github.com/ak2296/quee/releases/latest/download/Quee.apk">Ladda ner appen</a>
     <p class="small">Senaste versionen · Android 7.0 eller senare</p>
   </div>
   <div class="card">
     <h2>Så installerar du</h2>
     <ol>
-      <li>Tryck på <b>Ladda ner appen</b> och vänta tills filen är nedladdad.</li>
+      <li>Nedladdningen startar av sig själv. Startar den inte, tryck på <b>Ladda ner appen</b>. Vänta tills filen är nedladdad.</li>
       <li>Öppna filen <b>Quee.apk</b>.</li>
       <li>Frågar telefonen om installation från okänd källa: välj <b>Inställningar</b>, slå på <b>Tillåt från den här källan</b> och gå tillbaka.</li>
       <li>Tryck på <b>Installera</b>.</li>
@@ -52,5 +53,9 @@ footer { text-align: center; font-size: 13px; color: var(--muted); padding-botto
   </div>
 </main>
 <footer>Appen kräver en aktiveringskod för att skanna och spara.</footer>
+<script>
+// Starts the download a moment after the page has opened. The button above still works without this.
+setTimeout(function () { location.href = document.getElementById("dl").href; }, 1200);
+</script>
 </body>
 </html>

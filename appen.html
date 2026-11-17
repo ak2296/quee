@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quee – bokföringsunderlag direkt från mobilen</title>
+<meta name="description" content="Skanna Z-rapporter, fakturor och kvitton. Kontrollera, och skicka till din redovisare. Dina uppgifter lämnar aldrig telefonen.">
+<link rel="icon" href="ikon.png">
+<style>
+:root { --green: #0B6B4E; --tint: #E4F2EC; --ink: #10201B; --muted: #62706A; --bg: #F5F7F4; --line: #E8ECE6; --pum: #E2600D; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.55; }
+header { background: var(--green); color: #fff; padding: 40px 20px 70px; text-align: center; }
+header img { width: 84px; height: 84px; border-radius: 20px; box-shadow: 0 0 0 3px rgba(255,255,255,.35); }
+h1 { margin: 16px auto 8px; font-size: 32px; line-height: 1.15; max-width: 620px; }
+header p { margin: 0 auto; max-width: 560px; opacity: .92; font-size: 18px; }
+main { max-width: 760px; margin: -40px auto 40px; padding: 0 16px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 22px; margin-bottom: 18px; }
+.btn { display: block; text-align: center; background: var(--green); color: #fff; text-decoration: none; font-weight: 700; font-size: 19px; padding: 17px; border-radius: 15px; }
+.btn.alt { background: #fff; color: var(--green); border: 2px solid var(--green); margin-top: 10px; }
+h2 { font-size: 24px; margin: 0 0 12px; }
+video { width: 100%; max-width: 380px; display: block; margin: 0 auto; border-radius: 22px; background: #000; }
+.steps { display: grid; gap: 14px; padding: 0; list-style: none; counter-reset: s; margin: 0; }
+.steps li { counter-increment: s; position: relative; padding-left: 52px; }
+.steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 36px; height: 36px; border-radius: 50%; background: var(--green); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.steps b { display: block; font-size: 18px; }
+.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.shots img { width: 100%; border-radius: 18px; border: 1px solid var(--line); background: #fff; }
+.shots figcaption, .small { font-size: 14px; color: var(--muted); text-align: center; margin-top: 6px; }
+@media (max-width: 560px) { .shots { grid-template-columns: 1fr 1fr 1fr; gap: 8px; } h1 { font-size: 27px; } }
+.price { text-align: center; }
+.price .amount { font-size: 54px; font-weight: 800; color: var(--green); line-height: 1.1; }
+.price .amount span { font-size: 20px; font-weight: 600; color: var(--muted); }
+.price ul { text-align: left; max-width: 420px; margin: 16px auto; padding-left: 22px; }
+.lock { background: var(--tint); border-color: #c8e3d6; }
+.lock h2 { color: var(--green); }
+footer { text-align: center; font-size: 13px; color: var(--muted); padding: 0 20px 40px; max-width: 700px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<header>
+  <img src="ikon.png" alt="Quee">
+  <h1>Skanna. Kontrollera. Skicka till redovisaren.</h1>
+  <p>Quee läser dina Z-rapporter, fakturor och kvitton och gör ordning på månaden.</p>
+</header>
+<main>
+  <div class="card">
+    <video controls playsinline muted loop preload="metadata" poster="media/skarm-1.png" src="media/quee-video.mp4"></video>
+    <p class="small">Så fungerar Quee på 45 sekunder</p>
+  </div>
+
+  <div class="card">
+    <h2>Så fungerar det</h2>
+    <ol class="steps">
+      <li><b>Skanna</b>Ta en bild på Z-rapporten, fakturan eller kvittot. Appen läser av datum, belopp och moms.</li>
+      <li><b>Kontrollera</b>Osäkra uppgifter är markerade. Inget sparas förrän du har sagt OK.</li>
+      <li><b>Skicka</b>Redovisarpaketet samlar rapporter och SIE-fil till din redovisare, med e-post eller sms.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Så ser det ut</h2>
+    <div class="shots">
+      <figure style="margin:0"><img src="media/skarm-1.png" alt="Kontrollera uppgifterna efter en skanning"><figcaption>Kontrollera</figcaption></figure>
+      <figure style="margin:0"><img src="media/skarm-2.png" alt="Resultat och balans"><figcaption>Bokslut</figcaption></figure>
+      <figure style="margin:0"><img src="media/skarm-3.png" alt="Redovisning och redovisarpaket"><figcaption>Redovisning</figcaption></figure>
+    </div>
+    <p class="small">Skärmbilder med exempeldata.</p>
+  </div>
+
+  <div class="card lock">
+    <h2>Dina uppgifter lämnar aldrig telefonen</h2>
+    <p>Allt du skannar ligger bara i din egen telefon. Appen har inget konto och ingen molntjänst för dina dokument. Det enda som skickas när du beställer är företagsnamn och organisationsnummer. Du bestämmer själv vad som skickas vidare, och till vem.</p>
+  </div>
+
+  <div class="card price">
+    <h2>Pris</h2>
+    <!-- PRIS: ändra bara raden nedan -->
+    <div class="amount">399 kr<span> / månad, exkl. moms</span></div>
+    <ul>
+      <li>Första veckan är gratis</li>
+      <li>Alla funktioner ingår: skanning, rapporter, SIE-fil och redovisarpaket</li>
+      <li>Du ser vad som sparas innan det sparas</li>
+    </ul>
+    <p class="small">En redovisningskonsult kostar ofta flera hundra kronor per timme. Med färdigt underlag går det snabbare för både dig och din redovisare.</p>
+    <a class="btn" href="https://github.com/ak2296/quee/releases/latest/download/Quee.apk">Ladda ner och prova en vecka gratis</a>
+    <a class="btn alt" href="./">Så installerar du appen</a>
+  </div>
+</main>
+<footer>Quee förbereder och sorterar underlag. Moms och skatt i appen är beräknade och ersätter inte din redovisare eller en deklaration. Finns för Android.</footer>
+</body>
+</html>
